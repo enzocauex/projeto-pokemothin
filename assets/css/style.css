@@ -66,7 +66,7 @@ nav .img img {
     height: auto;
 }
 
-nav img {
+nav #search-icon {
     width: 2.2rem;
     height: auto;
 }
@@ -104,15 +104,15 @@ main {
 }
 
 .cards {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    flex-wrap: wrap;
     gap: 1.5rem;
 }
 
 .card {
     content: "";
     background: #C4C4C4;
-    border-radius: 4px;
+    border-radius: .4rem;
     width: 100%;
     height: 24rem;
     display: flex;
@@ -137,28 +137,119 @@ main {
     padding: .6rem 1.6rem;
 }
 
-/* ul {
-    list-style: none;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 26px;
+ul {
+    display: none;
+    opacity: 0;
 }
 
-a {
-    text-decoration: none;
-
-    font-weight: 500;
-    font-size: 23px;
-    line-height: 34px;
-    color: #2F89BD;
+.right-side {
+    display: none;
+    opacity: 0;
 }
 
-a.active {
-    color: #F0A623;
-    text-decoration-line: underline;
+#search-icon {
+    display: visible;
+    opacity: 1;
 }
+
+@media (min-width: 768px) {
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 889px) {
+    .hamburguer-menu {
+        display: none;
+        opacity: 0;
+    }
+
+    nav {
+        padding: 2.6rem 2.4rem;
+        height: 8.9rem;
+    }
+
+    nav .img img {
+        width: 24rem;
+        height: auto;
+    }
+
+    nav .right-side img {
+        width: 2.4rem;
+        height: auto;
+    }
+
+    nav .assets {
+        display: flex;
+        align-items: center;
+        gap: 3.7rem;
+    }
+
+    .right-side {
+        display: flex;
+        gap: 2.6rem;
+        display: visible;
+        opacity: 1;
+    }
+    
+    .right-side #profile-icon {
+        width: 5rem;
+        padding: .2rem;
+
+        border-radius: 50%;
+        border: 1px solid #2F89BD;
+    }
+
+    ul {
+        display: visible;
+        opacity: 1;
+
+        list-style: none;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.6rem;
+    }
+    
+    a {
+        text-decoration: none;
+    
+        font-weight: 500;
+        font-size: 2.3rem;
+        line-height: 3.4rem;
+        color: #2F89BD;
+    }
+
+    a.active {
+        color: #F0A623;
+        border-bottom: 2px solid #F0A623;
+    }
+
+    nav #search-icon {
+        display: none;
+    }
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 0.7rem;
+    height: 0.7rem;
+    margin-right: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #C1C1C1;
+    border-radius: .4rem;
+    cursor: move;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    border: none;
+}
+
+/* 
 
 .user-assets {
     display: flex;
