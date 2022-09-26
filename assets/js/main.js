@@ -1,10 +1,9 @@
- const a = document.querySelectorAll('li a')
+const menu =  document.querySelector('.hamburguer-menu')
+const nav = document.querySelector('nav')
 
- a.forEach(addEventListener("click", (event) => {
-     print()
- }))
+menu.addEventListener('click', showMenu)
 
- function print() {
-     
+function showMenu() {
+    nav.classList.toggle('close')
     console.log('enzo')
- }
+}
