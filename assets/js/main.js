@@ -4,6 +4,6 @@ const nav = document.querySelector('nav')
 menu.addEventListener('click', showMenu)
 
 function showMenu() {
-    nav.classList.toggle('close')
+    nav.classList.toggle('open')
     console.log('enzo')
 }
