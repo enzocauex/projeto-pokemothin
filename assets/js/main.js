@@ -1,9 +1,9 @@
 const menu =  document.querySelector('.hamburguer-menu')
-const nav = document.querySelector('nav')
+const list = document.querySelector('ul')
 
 menu.addEventListener('click', showMenu)
 
 function showMenu() {
-    nav.classList.toggle('open')
+    list.classList.toggle('open')
     console.log('enzo')
 }
