@@ -143,6 +143,12 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+
+    transition: transform .3s;
+}
+
+.card:hover {
+    transform: scale(1.02);
 }
 
 .card-text {
@@ -283,9 +289,13 @@ a {
         position: absolute;
         bottom: -2px;
 
-        background-color: #2F89BD;
+        background-color: currentColor;
         visibility: hidden;
         opacity: 0;
+    }
+    
+    li a:hover::before {
+        animation: showLine .7s forwards;
     }
 
     nav #search-icon {

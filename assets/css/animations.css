@@ -1,8 +1,20 @@
-/* Hover Effect Animation */
-
-li a:hover::before {
-    animation: showLine .7s forwards;
+nav {
+    animation: fromTop .7s backwards;
 }
+
+.title {
+    animation: fromLeft .7s .2s backwards;
+}
+
+.insignia {
+    animation: fromRight .7s .2s backwards;
+}
+
+main {
+    animation: fromTop .7s .3s backwards;
+}
+
+/* Hover Effect Animation */
 
 @keyframes showLine {
     from {
@@ -13,6 +25,48 @@ li a:hover::before {
 
     to {
         visibility: visible;
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* fromTop Animation */
+
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* fromLeft Animation */
+
+@keyframes fromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* fromRight Animation */
+
+@keyframes fromRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
         opacity: 1;
         transform: translateX(0);
     }

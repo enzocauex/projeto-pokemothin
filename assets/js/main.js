@@ -1,9 +1,12 @@
-const menu =  document.querySelector('.hamburguer-menu')
-const list = document.querySelector('ul')
+function selectItem(event) {
+    const item = event.currentTarget
 
-menu.addEventListener('click', showMenu)
+    const items = document.querySelectorAll("ul li a")
+    items.forEach(removeActiveClass)
 
-function showMenu() {
-    list.classList.toggle('open')
-    console.log('enzo')
+    function removeActiveClass(item) {
+        item.classList.remove('active')
+    }
+
+    item.classList.add("active")
 }
