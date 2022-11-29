@@ -55,9 +55,9 @@ nav {
     opacity: .8;
 } */
 
-.hamburguer-menu,
-.hamburguer-menu::before,
-.hamburguer-menu::after {
+.hamburger-menu,
+.hamburger-menu::before,
+.hamburger-menu::after {
     display: block;
     width: 2.2rem;
     height: .3rem;
@@ -65,16 +65,16 @@ nav {
     border-radius: 9999px;
 }
 
-.hamburguer-menu {
+.hamburger-menu {
     margin-top: -1.8rem;
 }
 
-.hamburguer-menu::before {
+.hamburger-menu::before {
     margin-top: .8rem;
     content: "";
 }
 
-.hamburguer-menu::after {
+.hamburger-menu::after {
     margin-top: .5rem;
     content: "";
 }
@@ -204,7 +204,7 @@ a {
 }
 
 @media (min-width: 889px) {
-    .hamburguer-menu {
+    .hamburger-menu {
         display: none;
         opacity: 0;
     }
@@ -269,6 +269,23 @@ a {
     a.active {
         color: #F0A623;
         border-bottom: 2px solid #F0A623;
+    }
+
+    li a {
+        position: relative;
+    }
+
+    li a::before {
+        content: "";
+        height: 2px;
+        width: 100%;
+
+        position: absolute;
+        bottom: -2px;
+
+        background-color: #2F89BD;
+        visibility: hidden;
+        opacity: 0;
     }
 
     nav #search-icon {
