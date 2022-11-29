@@ -1,0 +1,19 @@
+/* Hover Effect Animation */
+
+li a:hover::before {
+    animation: showLine .7s forwards;
+}
+
+@keyframes showLine {
+    from {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+
+    to {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
